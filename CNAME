@@ -1,1 +1,170 @@
-testwebpage.github.io.com
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fff;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 430px;
+      min-height: 100vh;
+      padding: 40px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .logo {
+      text-align: center;
+      font-size: 38px;
+      font-weight: bold;
+      margin-bottom: 45px;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: #777;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+
+    input {
+      width: 100%;
+      padding: 16px;
+      margin-bottom: 12px;
+      border: 1px solid #ddd;
+      background: #fafafa;
+      border-radius: 9px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus {
+      border-color: #999;
+    }
+
+    button {
+      width: 100%;
+      padding: 15px;
+      margin-top: 8px;
+      background: #3897f0;
+      border: none;
+      border-radius: 9px;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    button:active {
+      opacity: 0.8;
+    }
+
+    .forgot {
+      text-align: right;
+      margin-top: 20px;
+      font-size: 14px;
+      color: #3897f0;
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 30px 0;
+      color: #999;
+      font-size: 13px;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #ddd;
+    }
+
+    .signup {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 35px;
+      color: #555;
+    }
+
+    .signup span {
+      color: #3897f0;
+      font-weight: bold;
+    }
+
+    .demo-label {
+      margin-top: 30px;
+      text-align: center;
+      color: #999;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <h1 class="logo">Instagram</h1>
+
+    <form id="loginForm">
+      <input
+        type="text"
+        id="username"
+        placeholder="Username"
+        autocomplete="username"
+        required
+      >
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Password"
+        autocomplete="current-password"
+        required
+      >
+
+      <button type="submit">Log in</button>
+    </form>
+
+    <p class="forgot">Forgot password?</p>
+
+    <div class="divider">OR</div>
+
+    <p class="signup">
+      Don't have an account? <span>Sign up</span>
+    </p>
+
+  </main>
+
+  <script>
+    document.getElementById("loginForm")
+      .addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        alert("UI is working! Backend and database will be added in the next lesson.");
+      });
+  </script>
+</body>
+</html>
